@@ -95,6 +95,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\btnCustom.png" />
+    <Resource Include="Images\btnEasy.png" />
+    <Resource Include="Images\btnExit.png" />
+    <Resource Include="Images\btnHard.png" />
+    <Resource Include="Images\btnLevel.png" />
+    <Resource Include="Images\btnNormal.png" />
+    <Resource Include="Images\btnNumbers.png" />
+    <Resource Include="Images\btnOptions.png" />
+    <Resource Include="Images\btnStart.png" />
+    <Resource Include="Images\btnStop.png" />
+    <Resource Include="Images\btnText.png" />
+    <Resource Include="Images\btnWords.png" />
+    <Resource Include="Images\infoBackground.png" />
+    <Resource Include="Images\lblEmpty.png" />
+    <Resource Include="Images\lblHit.png" />
+    <Resource Include="Images\lblMishit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -5,8 +5,218 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TypingSpeeder"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        Title="MainWindow" Height="710" Width="1030">
+    <Grid Height="700" Width="1024" Background="#02bec4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="750"/>
+            <ColumnDefinition Width="274"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="400"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.ColumnSpan="2" 
+              Grid.Row="0" 
+              VerticalAlignment="Top" 
+              Height="50" 
+              Width="Auto"
+              Background="Transparent"
+              Margin="0 25 0 0">
+            <MenuItem Height="50" 
+                      Width="200"                      
+                      Margin="75 0 0 0">
+                <MenuItem.Background>
+                    <ImageBrush  ImageSource=".\Images\btnLevel.png"/>
+                </MenuItem.Background>
+                <MenuItem Name="mitEasy"
+                          Height="50" 
+                          Width="200"
+                          Margin="0 25 0 0" 
+                          Click="mitEasy_Click">
+                    <MenuItem.Background>
+                        <ImageBrush  ImageSource=".\Images\btnEasy.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Name="mitNormal"
+                          Height="50" 
+                          Width="200"
+                          Margin="0 25 0 0"
+                          Click="mitNormal_Click">
+                    <MenuItem.Background>
+                        <ImageBrush  ImageSource=".\Images\btnNormal.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Name="mitHard"
+                          Height="50" 
+                          Width="200"
+                          Margin="0 25 0 0"
+                          Click="mitHard_Click">
+                    <MenuItem.Background>
+                        <ImageBrush  ImageSource=".\Images\btnHard.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+            </MenuItem>
+
+            <MenuItem Height="50" 
+                      Width="200"                      
+                      Margin="25 0 0 0">
+                <MenuItem.Background>
+                    <ImageBrush  ImageSource=".\Images\btnOptions.png"/>
+                </MenuItem.Background>
+
+                <MenuItem Name="mitNumbers"
+                          Height="50" 
+                          Width="200"
+                          Margin="0 25 0 0" 
+                          Click="mitNumbers_Click">
+                    <MenuItem.Background>
+                        <ImageBrush  ImageSource=".\Images\btnNumbers.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Name="mitText"
+                          Height="50" 
+                          Width="200"
+                          Margin="0 25 0 0" 
+                          Click="mitText_Click">
+                    <MenuItem.Background>
+                        <ImageBrush  ImageSource=".\Images\btnWords.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+            </MenuItem>
+
+            <MenuItem Name="mitExit"
+                          Height="50" 
+                          Width="200"
+                          Margin="25 0 0 0"
+                          Click="mitExit_Click">
+                <MenuItem.Background>
+                    <ImageBrush  ImageSource=".\Images\btnExit.png"/>
+                </MenuItem.Background>
+            </MenuItem>
+        </Menu>
+
+        <Canvas Grid.Row="1" 
+                    Grid.Column="0" 
+                    Name="cvsGameBoard"  
+                    Background="#d2f7e7" 
+                    Height="Auto"
+                    Width="Auto"                 
+                    Margin="50 0 0 0 "/>
         
+        <TextBox Grid.Column="0"
+                 Grid.Row="2" 
+                 Name="txtEnterAnswer" 
+                 Height="100" 
+                 Width="Auto"     
+                 Margin="50 50 0 0"                     
+                 KeyDown="txtEnterAnswer_KeyDown"
+                 Background="#e1f7e7"
+                 FontSize="25"/>
+     
+        <Grid Grid.Column="1" 
+                    Grid.Row="1"                 
+                    Margin="25 0 50 0">
+            <Grid.Background>
+                <ImageBrush ImageSource=".\Images\infoBackground.png"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="1"
+                   Margin="10 2">
+                <Label.Background>
+                    <ImageBrush  ImageSource=".\Images\btnLevel.png"/>
+                </Label.Background>
+            </Label>
+            <Label Name="lblLevelOption"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   Margin="10 2">
+                <Label.Background>
+                    <ImageBrush  ImageSource=".\Images\btnNormal.png"/>
+                </Label.Background>
+            </Label>
+
+            <Label Margin="10 2"
+                Grid.Row="2">
+                <Label.Background>
+                    <ImageBrush  ImageSource=".\Images\btnOptions.png"/>
+                </Label.Background>
+            </Label>
+            <Label Name="lblTextOption" 
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   Margin="10 2">
+                <Label.Background>
+                    <ImageBrush  ImageSource=".\Images\btnNumbers.png"/>
+                </Label.Background>
+            </Label>
+
+            <Label Grid.Row="3" 
+                   Margin="10 2">
+                <Label.Background>
+                    <ImageBrush  ImageSource=".\Images\lblHit.png"/>
+                </Label.Background>
+            </Label>
+
+            <Border BorderBrush="#02547d"
+                    BorderThickness="2"
+                    Background="#0284a8"
+                    Grid.Column="1"
+                    Grid.Row="3"                    
+                    Margin="10 2"
+                    CornerRadius="1">
+                <TextBlock Name="txtPoints"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Foreground="#d2f7e7"
+                           FontWeight="Bold"
+                           Background="Transparent"       
+                           Text="0"/>
+            </Border>
+            <Border BorderBrush="#02547d"
+                    BorderThickness="2"
+                    Background="#0284a8"
+                    Grid.Column="1"
+                    Grid.Row="4"                    
+                    Margin="10 2"
+                    CornerRadius="1">
+                <TextBlock Name="txtMisses"                           
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Foreground="#d2f7e7"
+                           FontWeight="Bold"
+                           Background="Transparent"                            
+                           Text="0"/>
+            </Border>
+            <Label Grid.Row="4" 
+                    Margin="10 2">
+                <Label.Background>
+                    <ImageBrush  ImageSource=".\Images\lblMishit.png"/>
+                </Label.Background>
+            </Label>
+        </Grid>
+      
+        <Button Name="btnStartStop"
+                Grid.Column="1" 
+                Grid.Row="2" 
+                Height="100"                 
+                Margin="25 50 50 0" Focusable="False"
+                Click="btnStartStop_Click">
+            <Button.Background>
+                <ImageBrush ImageSource=".\Images\btnStart.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>
