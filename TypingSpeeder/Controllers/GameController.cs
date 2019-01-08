@@ -7,6 +7,8 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using TypingSpeeder.Engines;
+using TypingSpeeder.Model;
+using TypingSpeeder.Providers;
 
 namespace TypingSpeeder.Controllers
 {
@@ -23,7 +25,7 @@ namespace TypingSpeeder.Controllers
 
         public bool IsWorking { get { return ge.IsRunning; } }
 
-        public TextBlockManipulator(Canvas cnv)
+        public GameController(Canvas cnv)
         {
             canvas = cnv;
             ge.NextSampleAdded += addNextTextBlock;

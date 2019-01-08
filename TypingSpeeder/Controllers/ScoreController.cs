@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TypingSpeeder.Controllers
 {
-    public static class ScoreCalculator
+    public static class ScoreController
     {
         static int points = 0;
         static int mishit = 0;
