@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Providers\DataProvider.cs" />
+    <Compile Include="Providers\DataTextProvider.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -65,6 +67,7 @@
     </Compile>
     <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\ModeController.cs" />
+    <Compile Include="Controllers\ScoreController.cs" />
     <Compile Include="Engines\GameEngine.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
