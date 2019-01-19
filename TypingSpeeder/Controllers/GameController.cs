@@ -150,6 +150,11 @@ namespace TypingSpeeder.Controllers
             {
                 canvas.Children.RemoveAt(0);
             });
+
+            if (canvas.Children.Count == 0)
+            {
+                ge.InvokeNextTextSample();
+            }
         }
 
         public void SelectMode(Level level)
