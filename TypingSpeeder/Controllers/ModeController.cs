@@ -17,9 +17,9 @@ namespace TypingSpeeder.Controllers
                 // Mode Step Higher - faster move of the element.
                 // Mode Delay Higher - next element apears later.
                 // Mode TimeDrop Higher - faster reaches speed maximum.
-                {Level.Easy,new Mode(3,5,1,800) {Level=Level.Easy, MaxNumberRange=10 } },
-                {Level.Normal,new Mode(5,4,5,500) {Level=Level.Normal, MaxNumberRange=100 } },
-                {Level.Hard,new Mode(10,3,10,100) {Level=Level.Hard, MaxNumberRange=1000 } }
+                {Level.Easy,new Mode(1,25,20,800) {Level=Level.Easy, MaxNumberRange=10 } },
+                {Level.Normal,new Mode(1,25,50,500) {Level=Level.Normal, MaxNumberRange=100 } },
+                {Level.Hard,new Mode(1,25,100,100) {Level=Level.Hard, MaxNumberRange=1000 } }
             };
 
         public static Mode GetModeValues(Level mode)
